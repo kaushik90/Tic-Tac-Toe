@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>	
+    <title>Tic Tac Toe!</title>
+    <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+    <script src="gamelogic_2.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    </head>
+<body>
+	<div class="workbench">
+	    <div class="play_area">
+	      <div class="grid">
+                <span id="1"></span>
+                <span id="2"></span>
+                <span id="3"></span>
+                
+                <span id="4"></span>
+                <span id="5"></span>
+                <span id="6"></span>
+                
+                <span id="7"></span>
+                <span id="8"></span>
+                <span id="9"></span>
+	      </div>
+			<div class="turn_indicator">
+               			 <div id="X" class="turns"><div id="xp">OPP: √</div></div>
+               			 <div id="O" class="turns"><div id="op">YOU: √</div></div>
+           		 </div>
+	    </div>
+		<div>Game History<br>
+                        <ul></ul>
+                </div>
+	</div>
+</body>
+</html>

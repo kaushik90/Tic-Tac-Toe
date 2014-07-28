@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<head>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<div class="wrapper">
+	<div class="heading">TIC-TAC-TOE</div>
+	<div class="newgame"><button class="index" id="newGame" type="button">Start New Game</button></div>
+	<div class="oldgame">
+  			Token: <input id = "token" type="text" name="fname"><br>
+  			<button class="index" id="joinGame" type="button">Join Game</button>
+	</div>
+	</div>
+
+	<script>
+
+		$( "#newGame" ).click(function() {
+  		window.location.href = "/newgame";
+		});
+
+		$( "#joinGame" ).click(function() {
+			var token = document.getElementById("token").value;
+			if(token==="")
+			{
+				alert("enter a valid token");
+				return false;
+			}
+			var URL = "/";
+		    URL = URL.concat(token);
+  		window.location.href = URL;
+		});
+
+	</script>
+</body>
+</html>
