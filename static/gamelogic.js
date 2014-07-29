@@ -40,7 +40,6 @@ window.opponent="NO";
 
         // update the game with opponent's move information
         socket.on('move', function(data) {
-	//alert("move received");
             game.game_play[data.play]=data.player;
             game.turn+=1; 
 	    $("#xp").toggle();
@@ -52,7 +51,6 @@ window.opponent="NO";
 		    $("ul").append("<li>" + data.player+ " Won!</li>");
                     game = new TicTacToe();
                     clearCanvas()
-                    $("span").css("background-color","white");
                 }
 		else
                 {
@@ -62,10 +60,9 @@ window.opponent="NO";
                 }
             if(game.turn>9)
                 {
-                   // alert("draw!");
+                    //draw!
 		    $("ul").append("<li>Draw!</li>")
                     game = new TicTacToe();
-                    $("span").css("background-color","white");
                     clearCanvas();
                 }
         });
@@ -95,7 +92,6 @@ window.opponent="NO";
 		    $("ul").append("<li>X Won!</li>")
                     game = new TicTacToe();
                     clearCanvas()
-                    $("span").css("background-color","white");
                 }
             else 
             {
@@ -116,7 +112,6 @@ window.opponent="NO";
 		    $("ul").append("<li>O Won!</li>")
                     game = new TicTacToe();
                     clearCanvas()
-                    $("span").css("background-color","white");
                 }
             else 
             {
@@ -131,7 +126,6 @@ window.opponent="NO";
                // alert("draw!");
 		$("ul").append("<li>Draw!</li>")
                 game = new TicTacToe();
-                $("span").css("background-color","white");
                 clearCanvas();
             }
     });
