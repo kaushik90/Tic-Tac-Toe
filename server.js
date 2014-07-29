@@ -41,6 +41,6 @@ io.on('connection', function(socket){
 
 app.use(express.static(path.join(__dirname, 'static')));
 
-http.listen(8888, function(){
-	console.log('server started on 8888');
+http.listen(8000, function(){
+	console.log('server started on 8000');
 });
